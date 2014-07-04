@@ -1,0 +1,8 @@
+<h1>Edit Your Pizza</h1>
+
+<%= render 'form' %>
+
+<form action="/pizzas/<%= @pizza.id %>/toppings/new" method='get'>
+  <%= token_tag%>
+  <button type='submit'>Add Topping</button>
+</form>

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PizzasToppingsApp</title>
+  <title>Pizza is the Best</title>
+  <link href="http://fonts.googleapis.com/css?family=Fjalla+One|Cantarell:400,400italic,700italic,700" rel="stylesheet" type="text/css" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <nav>
+    <a href='/pizzas'>ALL OF THE PIZZAS</a>
+  </nav>
+
+  <div class="main">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

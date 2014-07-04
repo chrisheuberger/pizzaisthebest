@@ -1,0 +1,17 @@
+<h1>Pizzas</h1>
+
+<ul>
+  <% @pizzas.each do |pizza| %>
+    <li><a href='/pizzas/<%= pizza.id %>'><%= pizza.name %></a>
+      <ul>
+        <% pizza.toppings.each do |topping| %>
+          <li><%= topping.name %></li>
+        <% end %>
+      </ul>
+    </li>
+  <%end%>
+</ul>
+
+<br>
+
+<a href='/pizzas/new'>MAKE A PIZZA</a>

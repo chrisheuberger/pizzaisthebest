@@ -1,0 +1,7 @@
+<h1>Add A Topping</h1>
+
+<form action="/pizzas/<%= @pizza.id %>/toppings" method="post">
+  <%= token_tag%>
+  <input type="text" name="topping[name]" placeholder="name">
+  <input type="submit">
+</form>
