@@ -1,32 +1,38 @@
 body {
+  font-family: 'Cantarell', sans-serif;
+  font-weight: normal;
+  padding: 0;
   margin: 0;
 }
+
 nav {
   background-color: #222222;
   margin: 0px auto 20px auto;
   padding: 10px;
   text-align: center;
 }
+
 nav a {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Cantarell', sans-serif;
   font-weight: normal;
   letter-spacing: .25em;
   color: white;
   text-decoration: none;
 }
+
 nav a:hover {
   color: lightgray;
   text-decoration: none;
 }
+
 h1 {
     text-align: center;
-    font-family: 'Fjalla One', sans-serif;
-    font-weight: normal;
     text-transform: uppercase;
     line-height: 47px;
     font-size: 45px;
     margin: 0 0 30px 0;
-    }
+}
+
 h2 {
     text-align: center;
     font-family: 'Cantarell', sans-serif;
@@ -35,29 +41,40 @@ h2 {
     line-height: 24px;
     text-transform: uppercase;
     margin: 0 0 15px 0;
-    }
+}
+
+h2.best {
+  font-size: 14em;
+  color: white;
+}
+
 p {
     text-align: center;
     font-family: 'Cantarell', sans-serif;
     font-size: 15px;
     line-height: 22px;
     margin: 0 0 15px 0;
-    }
+}
+
 div {
     font-family: 'Cantarell', sans-serif;
     font-size: 15px;
     line-height: 22px;
-    }
+}
+
 img {
+  position: relative;
   width: 500px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 ul {
   list-style: none;
   margin-left: -40px;
 }
+
 .main {
   margin: 20px auto;
   width: 600px;
@@ -65,9 +82,16 @@ ul {
   background-color: #ececea;
   text-align: center;
 }
+
+.yes {
+   text-align: center;
+   padding: 10px;
+}
+
 .center {
   text-align: center;
 }
+
 .field {
   font-family: 'Cantarell', sans-serif;
   font-size: 15px;
@@ -76,4 +100,25 @@ ul {
   padding: 5px;
   height: 20px;
   width: 500px;
+}
+
+.image-cage {
+  width: 100%;
+  overflow: hidden;
+}
+
+.information-block {
+  background-color: aqua;
+  margin: 0;
+  padding: 100px;
+}
+
+.image-banner {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.image-banner img {
+  width: 1400px;
 }

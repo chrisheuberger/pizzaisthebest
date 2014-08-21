@@ -1,17 +1,21 @@
-<h1>Pizzas</h1>
+<div class="main">
 
-<ul>
-  <% @pizzas.each do |pizza| %>
+  <h1>Pizzas</h1>
+
+  <ul>
+    <% @pizzas.each do |pizza| %>
     <li><a href='/pizzas/<%= pizza.id %>'><%= pizza.name %></a>
       <ul>
         <% pizza.toppings.each do |topping| %>
-          <li><%= topping.name %></li>
+        <li><%= topping.name %></li>
         <% end %>
       </ul>
     </li>
-  <%end%>
-</ul>
+    <%end%>
+  </ul>
 
-<br>
+  <br>
 
-<a href='/pizzas/new'>MAKE A PIZZA</a>
+  <a href='/pizzas/new'>MAKE A PIZZA</a>
+
+</div>
