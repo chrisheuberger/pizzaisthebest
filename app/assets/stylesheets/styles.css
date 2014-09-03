@@ -105,10 +105,11 @@ ul {
 .image-cage {
   width: 100%;
   overflow: hidden;
+  background-color: black;
 }
 
 .information-block {
-  background-color: aqua;
+  background-color: black;
   margin: 0;
   padding: 100px;
 }
@@ -121,4 +122,17 @@ ul {
 
 .image-banner img {
   width: 1400px;
+}
+
+.flying-image {
+ margin: 40px auto;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  color: maroon;
 }

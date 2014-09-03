@@ -1,10 +1,3 @@
-function fadeBackgroundColor(){
-  var scrollTop = $(window).scrollTop();
-  console.log('scrollTop: ', scrollTop);
-  var documentHeigth = $(document).height();
-  console.log('documentHeigth: ', documentHeigth);
-  var scrollRatio = scrollTop/documentHeigth;
-}
 
 function updateBannerImagePosition(){
   var scrollTop = $(window).scrollTop();
@@ -17,8 +10,7 @@ function updateBannerImagePosition(){
 }
 
 $(window).on('scroll', function(){
-  fadeBackgroundColor();
   updateBannerImagePosition()
   var scrollTop = $(window).scrollTop();
-  $('.flying-image').css('left', scrollTop);
+  // $('.flying-image').css('left', scrollTop*10);
 })
