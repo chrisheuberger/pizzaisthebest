@@ -1,0 +1,391 @@
+/* global */
+
+h1, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+
+h1 {
+  line-height: 1;
+  font-size: 5rem;
+}
+
+h2, h4, h5, h6 {
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: normal;  
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0 0 23px 0;
+}
+
+a {
+  color: #fefefe;
+}
+
+a:focus,
+a:hover {
+  color: #FFD0B6;
+}
+
+footer.row {
+  position: fixed;
+  bottom: 2.75rem;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  background: #333;
+}
+
+.main-wrapper footer.row {
+  bottom: 0;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+
+@media screen and (max-width: 40em) {
+
+/*  footer p {
+    margin: .25rem 0 .5rem 0;
+  }*/
+
+}
+
+/* main */
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/desktop-background-main-1366x768.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-header {
+  color: #0A5870;
+  mix-blend-mode: multiply;
+}
+
+.main-subheader {
+  margin: 1rem 0 2rem 0;
+  color: #0A5870;
+  mix-blend-mode: multiply;
+}
+
+.main-content-outer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.main-content-inner {
+  margin: auto;
+}
+
+.main-option {
+  display: inline;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 40em) {
+
+  .main-option {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-option a {
+    width: 80%;
+  }
+
+}
+
+.button {
+  border-radius: 0;
+  background: #5A25CF;
+  padding: 1.25rem 1.75rem;
+}
+
+.button:hover {
+  background: #E2105F;
+}
+
+footer p small {
+  color: white;
+}
+
+/* internal */
+
+header.row {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 2;
+  background: #333;
+}
+
+.internal-header {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  margin-top: .5rem;
+  margin-left: 1rem;
+}
+
+.top-right {
+  position: absolute;
+  top: -2.25rem;
+  right: 1rem;
+  z-index: 3;
+}
+
+.pt-trigger {
+  cursor: pointer;
+  color: #FFD0B6;
+}
+
+.pt-trigger:hover {
+  color: #FFB892;
+}
+
+.mobile-frame {
+  position: absolute;
+  top: 50%;
+  /*bottom: 0;*/
+  left: 50%;
+  /*right: 0;*/
+  transform: translate(-50%,-60%);
+  width: 40vh; 
+  height: 70vh;
+  /*margin: auto;*/
+  padding: 10px 0 30px 0;
+  background: #333;
+  border-radius: 10px;
+}
+
+.mobile-screen {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 40em) {
+
+/*  .internal-header,
+  .pt-triggers {
+    text-align: center;
+  }
+
+  .internal-header {
+    margin-top: -0.5rem;
+  }
+
+  .pt-triggers p {
+    margin-bottom: 0.5rem;
+  }*/
+
+}
+
+.pt-page-1,
+.pt-page-2,
+.pt-page-3,
+.pt-page-4,
+.pt-page-5,
+.pt-page-6,
+.pt-page-7,
+.pt-page-8,
+.pt-page-9,
+.pt-page-10,
+.pt-page-11,
+.pt-page-12,
+.pt-page-13,
+.pt-page-14,
+.pt-page-15,
+.pt-page-16,
+.pt-page-17,
+.pt-page-18,
+.pt-page-19,
+.pt-page-20,
+.pt-page-21,
+.pt-page-22,
+.pt-page-23,
+.pt-page-24,
+.pt-page-25,
+.pt-page-26,
+.pt-page-27,
+.pt-page-28,
+.pt-page-29,
+.pt-page-30,
+.pt-page-31 {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pt-page-1 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-1-640x960.jpg);
+}
+.pt-page-2 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-2-640x960.jpg);
+}
+.pt-page-3 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-3-640x960.jpg);
+}
+.pt-page-4 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-4-640x960.jpg);
+}
+.pt-page-5 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-5-640x960.jpg);
+}
+.pt-page-6 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-6-640x960.jpg);
+}
+.pt-page-7 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-7-640x960.jpg);
+}
+.pt-page-8 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-8-640x960.jpg);
+}
+.pt-page-9 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-9-640x960.jpg);
+}
+.pt-page-10 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-10-640x960.jpg);
+}
+.pt-page-11 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-11-640x960.jpg);
+}
+.pt-page-12 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-12-640x960.jpg);
+}
+.pt-page-13 .mobile-screen {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-13-640x960.jpg);
+}
+
+.pt-page-1.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-1-1366x768.jpg);
+}
+.pt-page-2.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-2-1366x768.jpg);
+}
+.pt-page-3.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-3-1366x768-v2.jpg);
+}
+.pt-page-4.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-4-1366x768.jpg);
+}
+.pt-page-5.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-5-1366x768.jpg);
+}
+.pt-page-6.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-6-1366x768-v2.jpg);
+}
+.pt-page-7.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-7-1366x768.jpg);
+}
+.pt-page-8.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-8-1366x768.jpg);
+}
+.pt-page-9.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-9-1366x768.jpg);
+}
+.pt-page-10.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-10-1366x768-v2.jpg);
+}
+.pt-page-11.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-11-1366x768.jpg);
+}
+.pt-page-12.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-12-1366x768.jpg);
+}
+.pt-page-13.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-13-1366x768.jpg);
+}
+.pt-page-14.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-14-1366x768.jpg);
+}
+.pt-page-15.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-15-1366x768.jpg);
+}
+.pt-page-16.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-16-1366x768.jpg);
+}
+.pt-page-17.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-17-1366x768.jpg);
+}
+.pt-page-18.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-18-1366x768.jpg);
+}
+.pt-page-19.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-19-1366x768.jpg);
+}
+.pt-page-20.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-20-1366x768.jpg);
+}
+.pt-page-21.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-21-1366x768.jpg);
+}
+.pt-page-22.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-22-1366x768.jpg);
+}
+.pt-page-23.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-23-1366x768.jpg);
+}
+.pt-page-24.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-24-1366x768.jpg);
+}
+.pt-page-25.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-25-1366x768.jpg);
+}
+.pt-page-26.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-26-1366x768.jpg);
+}
+.pt-page-27.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-27-1366x768.jpg);
+}
+.pt-page-28.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-28-1366x768.jpg);
+}
+.pt-page-29.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-29-1366x768.jpg);
+}
+.pt-page-30.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-30-1366x768-v2.jpg);
+}
+.pt-page-31.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-31-1366x768.jpg);
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 3;
+  background: #333;
+}
+
+@media screen and (max-width: 40em) {
+    
+/*  .bottom-left {
+    margin-bottom: .5rem;
+  }*/
+
+}
