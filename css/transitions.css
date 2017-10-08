@@ -27,12 +27,12 @@ body {
 
 .pt-page {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 80px);
   position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
-  overflow: hidden;
+  overflow: visible;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -59,7 +59,7 @@ body {
 }
 
 .pt-page-1 {
-  background: #73CBD6;
+  background: #00E4FF;
 }
 .pt-page-2 {
   background: #1B5674;
@@ -68,7 +68,7 @@ body {
   background: #FFD0B7;
 }
 .pt-page-4 {
-  background: #B1EDEF;
+  background: #9B8BFB;
 }
 .pt-page-5 {
   background: #FED93F;
@@ -77,22 +77,22 @@ body {
   background: #FE666A;
 }
 .pt-page-7 {
-  background: #9B8BFB;
+  background: #60FF82;
 }
 .pt-page-8 {
-  background: #FFECE5;
+  background: #3494B1;
 }
 .pt-page-9 {
   background: #10ACED;
 }
 .pt-page-10 {
-  background: #C4EBF0;
+  background: #60FF82;
 }
 .pt-page-11 {
-  background: #FFE9F3;
+  background: #FFECE5;
 }
 .pt-page-12 {
-  background: #8DD880;
+  background: #9B8BFB;
 }
 .pt-page-13 {
   background: #5C00CF;

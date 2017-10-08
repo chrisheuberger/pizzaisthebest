@@ -1,7 +1,7 @@
 /* global */
 
 h1, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 900;
 }
 
@@ -17,8 +17,14 @@ h2, h4, h5, h6 {
 
 p {
   font-size: 18px;
-  line-height: 23px;
-  margin: 0 0 23px 0;
+  line-height: 45px;
+  margin: 0;
+}
+
+@media screen and (max-width: 40em) {
+  p {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -32,8 +38,9 @@ a:hover {
 
 footer.row {
   position: fixed;
-  bottom: 2.75rem;
+  bottom: -35px;
   left: 0;
+  height: 35px;
   width: 100%;
   max-width: 100%;
   background: #333;
@@ -41,21 +48,30 @@ footer.row {
 
 .main-wrapper footer.row {
   bottom: 0;
+  height: auto;
 }
 
-footer p {
-  margin: 0.5rem 0;
+.footer-text-content {
+  padding: 0.5rem;
 }
 
-
-@media screen and (max-width: 40em) {
-
-/*  footer p {
-    margin: .25rem 0 .5rem 0;
-  }*/
-
+.footer-text-content p {
+  line-height: 24px;
+  margin: 0;
 }
 
+.footer-text-content p small {
+  font-size: 75%;
+  color: #aaa;
+}
+
+.footer-text-content p a {
+  color: #ccc;
+}
+
+.footer-text-content p a:hover {
+  color: #FFD0B6;
+}
 /* main */
 
 .main-wrapper {
@@ -117,8 +133,9 @@ footer p {
   background: #E2105F;
 }
 
-footer p small {
-  color: white;
+.button-number {
+  letter-spacing: 4px;
+  color: #eee;
 }
 
 /* internal */
@@ -134,15 +151,16 @@ header.row {
 }
 
 .internal-header {
-  font-family: 'Playfair Display', serif;
+  height: 45px;
+  margin: 0 0 0 1rem;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 900;
-  margin-top: .5rem;
-  margin-left: 1rem;
+  line-height: 45px;
 }
 
 .top-right {
   position: absolute;
-  top: -2.25rem;
+  top: -45px;
   right: 1rem;
   z-index: 3;
 }
@@ -159,16 +177,13 @@ header.row {
 .mobile-frame {
   position: absolute;
   top: 50%;
-  /*bottom: 0;*/
   left: 50%;
-  /*right: 0;*/
   transform: translate(-50%,-60%);
   width: 40vh; 
   height: 70vh;
-  /*margin: auto;*/
   padding: 10px 0 30px 0;
-  background: #333;
   border-radius: 10px;
+  background: #333;
 }
 
 .mobile-screen {
@@ -182,23 +197,6 @@ header.row {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 40em) {
-
-/*  .internal-header,
-  .pt-triggers {
-    text-align: center;
-  }
-
-  .internal-header {
-    margin-top: -0.5rem;
-  }
-
-  .pt-triggers p {
-    margin-bottom: 0.5rem;
-  }*/
-
 }
 
 .pt-page-1,
@@ -231,7 +229,8 @@ header.row {
 .pt-page-28,
 .pt-page-29,
 .pt-page-30,
-.pt-page-31 {
+.pt-page-31,
+.pt-page-32 {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -284,7 +283,7 @@ header.row {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-2-1366x768.jpg);
 }
 .pt-page-3.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-3-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-3-1366x768-v4.jpg);
 }
 .pt-page-4.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-4-1366x768.jpg);
@@ -293,7 +292,7 @@ header.row {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-5-1366x768.jpg);
 }
 .pt-page-6.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-6-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-6-1366x768-v5.jpg);
 }
 .pt-page-7.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-7-1366x768.jpg);
@@ -305,7 +304,7 @@ header.row {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-9-1366x768.jpg);
 }
 .pt-page-10.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-10-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-10-1366x768-v5.jpg);
 }
 .pt-page-11.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-11-1366x768-v3.jpg);
@@ -314,16 +313,16 @@ header.row {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-12-1366x768.jpg);
 }
 .pt-page-13.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-13-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-13-1366x768-v5.jpg);
 }
 .pt-page-14.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-14-1366x768.jpg);
 }
 .pt-page-15.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-15-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-15-1366x768-v5.jpg);
 }
 .pt-page-16.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-16-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-16-1366x768-v5.jpg);
 }
 .pt-page-17.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-17-1366x768.jpg);
@@ -347,7 +346,7 @@ header.row {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-23-1366x768-v3.jpg);
 }
 .pt-page-24.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-24-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-24-1366x768-v4.jpg);
 }
 .pt-page-25.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-25-1366x768-v3.jpg);
@@ -370,22 +369,23 @@ header.row {
 .pt-page-31.desktop-background {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-31-1366x768.jpg);
 }
+.pt-page-32.desktop-background {
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-32-5692x3200.png);
+}
 
 .bottom-left {
   position: fixed;
   bottom: 0;
   left: 0;
-  margin-bottom: .5rem;
+  height: 35px;
+  margin-bottom: 0;
   padding-left: 1rem;
   padding-right: 1rem;
+  line-height: 35px;
   z-index: 3;
   background: #333;
 }
 
-@media screen and (max-width: 40em) {
-    
-/*  .bottom-left {
-    margin-bottom: .5rem;
-  }*/
-
+.bottom-right {
+  line-height: 35px;
 }
