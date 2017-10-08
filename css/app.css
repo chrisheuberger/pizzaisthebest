@@ -7,6 +7,7 @@ h1, h3 {
 
 h1 {
   line-height: 1;
+  font-size: 80px;
   font-size: 5rem;
 }
 
@@ -52,6 +53,7 @@ footer.row {
 }
 
 .footer-text-content {
+  padding: 8px;
   padding: 0.5rem;
 }
 
@@ -72,6 +74,7 @@ footer.row {
 .footer-text-content p a:hover {
   color: #FFD0B6;
 }
+
 /* main */
 
 .main-wrapper {
@@ -89,14 +92,20 @@ footer.row {
 }
 
 .main-subheader {
+  margin: 16px 0 32px 0;
   margin: 1rem 0 2rem 0;
   color: #0A5870;
   mix-blend-mode: multiply;
 }
 
 .main-content-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 100%;
 }
 
@@ -106,6 +115,7 @@ footer.row {
 
 .main-option {
   display: inline;
+  padding: 0 16px;
   padding: 0 1rem;
 }
 
@@ -126,6 +136,7 @@ footer.row {
 .button {
   border-radius: 0;
   background: #5A25CF;
+  padding: 20px 28px;
   padding: 1.25rem 1.75rem;
 }
 
@@ -152,6 +163,7 @@ header.row {
 
 .internal-header {
   height: 45px;
+  margin: 0 0 0 16px;
   margin: 0 0 0 1rem;
   font-family: 'Playfair Display', sans-serif;
   font-weight: 900;
@@ -161,6 +173,7 @@ header.row {
 .top-right {
   position: absolute;
   top: -45px;
+  right: 16px;
   right: 1rem;
   z-index: 3;
 }
@@ -178,7 +191,8 @@ header.row {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-60%);
+  -webkit-transform: translate(-50%,-60%);
+          transform: translate(-50%,-60%);
   width: 40vh; 
   height: 70vh;
   padding: 10px 0 30px 0;
@@ -190,7 +204,8 @@ header.row {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
   width: 90%;
   height: 90%;
   margin: 0;
@@ -379,7 +394,9 @@ header.row {
   left: 0;
   height: 35px;
   margin-bottom: 0;
+  padding-left: 16px;
   padding-left: 1rem;
+  padding-right: 16px;
   padding-right: 1rem;
   line-height: 35px;
   z-index: 3;
