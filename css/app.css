@@ -6,9 +6,19 @@ h1, h3 {
 }
 
 h1 {
-  line-height: 1;
-  font-size: 80px;
-  font-size: 5rem;
+  line-height: 1.2;
+  font-size: 64px;
+  font-size: 4rem;
+}
+
+h1 a {
+  border-bottom: 4px solid #eee;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+h1 a:hover {
+  border-bottom: 4px solid #5A25CF;
 }
 
 h2, h4, h5, h6 {
@@ -52,50 +62,10 @@ footer.row {
   height: auto;
 }
 
-.footer-text-content {
-  padding: 8px;
-  padding: 0.5rem;
-}
-
-.footer-text-content p {
-  line-height: 24px;
-  margin: 0;
-}
-
-.footer-text-content p small {
-  font-size: 75%;
-  color: #aaa;
-}
-
-.footer-text-content p a {
-  color: #ccc;
-}
-
-.footer-text-content p a:hover {
-  color: #FFD0B6;
-}
-
 /* main */
 
 .main-wrapper {
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/desktop-background-main-1366x768.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.main-header {
-  color: #0A5870;
-  mix-blend-mode: multiply;
-}
-
-.main-subheader {
-  margin: 16px 0 32px 0;
-  margin: 1rem 0 2rem 0;
-  color: #0A5870;
-  mix-blend-mode: multiply;
+  text-align: center;
 }
 
 .main-content-outer {
@@ -104,49 +74,147 @@ footer.row {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 100%;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.main-content-inner {
-  margin: auto;
+.clip-content {
+  width: 90%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 1.5em;
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  font-size: 5em;
+  text-align: left;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.clip-content:before,
+.clip-content:after {
+  position: absolute;
+  content: "";
+}
+
+.clip-content:before {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+}
+
+.clip-content:after {
+  position: absolute;
+  z-index: -1;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  background-color: white;
+}
+
+.clip-content,
+.clip-content:before {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*buttons*/
 
 .main-option {
   display: inline;
-  padding: 0 16px;
-  padding: 0 1rem;
+  padding: 20px 28px;
+  padding: 1.25rem 1.75rem;
+  -webkit-background-clip: white;
+  -webkit-text-fill-color: white;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: none;
+  transition: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space:nowrap;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 6px #360D90;
+  background: #5A25CF;
 }
 
-@media screen and (max-width: 40em) {
+.main-option:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main-option:hover,
+.main-option:focus {
+  background: #E2105F;
+  box-shadow: 0 4px #B20546;
+  top: 2px;
+}
+
+.main-option:hover a,
+.main-option:focus a {
+  color: #FFD0B6;
+}
+
+.main-option:active {
+  background: #E2105F;
+  box-shadow: 0 0 #B20546;
+  top: 6px;
+}
+
+.main-option-number {
+  letter-spacing: 2px;
+  color: #eee;
+}
+
+@media screen and (max-width: 52em) {
+  
+  .clip-content {
+    padding: .5em;
+  }
+
+  .clip-content:after {
+    z-index: -1;
+    top: .25em;
+    right: .25em;
+    bottom: .25em;
+    left: .25em;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-size: 2rem;
+  }
 
   .main-option {
     display: block;
-    margin: 0;
-    padding: 0;
+    float: left; 
+    clear: left;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
   }
+
+   .main-option:first-of-type {
+    margin-top: 2rem;
+   }
   
   .main-option a {
     width: 80%;
   }
 
-}
-
-.button {
-  border-radius: 0;
-  background: #5A25CF;
-  padding: 20px 28px;
-  padding: 1.25rem 1.75rem;
-}
-
-.button:hover {
-  background: #E2105F;
-}
-
-.button-number {
-  letter-spacing: 4px;
-  color: #eee;
 }
 
 /* internal */
@@ -192,7 +260,7 @@ header.row {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-60%);
-          transform: translate(-50%,-60%);
+  transform: translate(-50%,-60%);
   width: 40vh; 
   height: 70vh;
   padding: 10px 0 30px 0;
@@ -205,7 +273,7 @@ header.row {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   width: 90%;
   height: 90%;
   margin: 0;
@@ -279,10 +347,10 @@ header.row {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-9-640x960.jpg);
 }
 .pt-page-10 .mobile-screen {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-10-640x960.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-10-640x960-v2.jpg);
 }
 .pt-page-11 .mobile-screen {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-11-640x960.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-11-640x960-v2.jpg);
 }
 .pt-page-12 .mobile-screen {
   background-image: url(https://d10vui2ys4vwdi.cloudfront.net/mobile-background-12-640x960.jpg);
@@ -292,100 +360,97 @@ header.row {
 }
 
 .pt-page-1.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-1-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-1-1600x1024.jpg);
 }
 .pt-page-2.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-2-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-2-1600x1024.jpg);
 }
 .pt-page-3.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-3-1366x768-v4.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-3-1600x1024.jpg);
 }
 .pt-page-4.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-4-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-4-1600x1024.jpg);
 }
 .pt-page-5.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-5-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-5-1600x1024.jpg);
 }
 .pt-page-6.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-6-1366x768-v5.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-6-1600x1024.jpg);
 }
 .pt-page-7.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-7-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-7-1600x1024.jpg);
 }
 .pt-page-8.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-8-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-8-1600x1024.jpg);
 }
 .pt-page-9.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-9-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-9-1600x1024.jpg);
 }
 .pt-page-10.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-10-1366x768-v5.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-10-1600x1024.jpg);
 }
 .pt-page-11.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-11-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-11-1600x1024.jpg);
 }
 .pt-page-12.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-12-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-12-1600x1024.jpg);
 }
 .pt-page-13.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-13-1366x768-v5.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-13-1600x1024.jpg);
 }
 .pt-page-14.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-14-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-14-1600x1024.jpg);
 }
 .pt-page-15.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-15-1366x768-v5.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-15-1600x1024.jpg);
 }
 .pt-page-16.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-16-1366x768-v5.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-16-1600x1024.jpg);
 }
 .pt-page-17.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-17-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-17-1600x1024.jpg);
 }
 .pt-page-18.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-18-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-18-1600x1024.jpg);
 }
 .pt-page-19.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-19-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-19-1600x1024.jpg);
 }
 .pt-page-20.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-20-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-20-1600x1024.jpg);
 }
 .pt-page-21.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-21-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-21-1600x1024.jpg);
 }
 .pt-page-22.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-22-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-22-1600x1024.jpg);
 }
 .pt-page-23.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-23-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-23-1600x1024.jpg);
 }
 .pt-page-24.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-24-1366x768-v4.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-24-1600x1024.jpg);
 }
 .pt-page-25.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-25-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-25-1600x1024.jpg);
 }
 .pt-page-26.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-26-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-26-1600x1024.jpg);
 }
 .pt-page-27.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-27-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-27-1600x1024.jpg);
 }
 .pt-page-28.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-28-1366x768-v3.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-28-1600x1024.jpg);
 }
 .pt-page-29.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-29-1366x768.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-29-1600x1024.jpg);
 }
 .pt-page-30.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-30-1366x768-v2.jpg);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-30-1600x1024.jpg);
 }
 .pt-page-31.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-31-1366x768.jpg);
-}
-.pt-page-32.desktop-background {
-  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-32-5692x3200.png);
+  background-image: url(https://d10vui2ys4vwdi.cloudfront.net/desktop-background-31-1600x1024.jpg);
 }
 
 .bottom-left {
