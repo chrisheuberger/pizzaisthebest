@@ -138,15 +138,17 @@ footer.row {
   -webkit-text-fill-color: white;
   position: relative;
   cursor: pointer;
-  -webkit-transition: none;
-  transition: none;
+ /* -webkit-transition: none;
+  transition: none;*/
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
   white-space:nowrap;
-  border-radius: 0 0 5px 5px;
+  border-radius: 3px;
   box-shadow: 0 6px #360D90;
   background: #5A25CF;
+  top: 0;
+  transition: all .3s ease;
 }
 
 .main-option:after {
@@ -161,9 +163,10 @@ footer.row {
 .main-option:focus {
   background: #E2105F;
   box-shadow: 0 4px #B20546;
-  top: 2px;
+  top: 4px;
 }
 
+.main-option a,
 .main-option:hover a,
 .main-option:focus a {
   color: #FFD0B6;
