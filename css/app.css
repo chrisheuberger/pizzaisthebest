@@ -43,7 +43,8 @@ a {
 }
 
 a:focus,
-a:hover {
+a:hover,
+a:visited {
   color: #FFD0B6;
 }
 
@@ -166,9 +167,10 @@ footer.row {
   top: 4px;
 }
 
-.main-option a,
-.main-option:hover a,
-.main-option:focus a {
+.main-option a strong,
+.main-option:hover a strong,
+.main-option:focus a strong {
+  -webkit-text-fill-color: #FFD0B6;
   color: #FFD0B6;
 }
 
